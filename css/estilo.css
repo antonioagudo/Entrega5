@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.grilla {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: .7fr 1fr 1fr .3fr 1.5fr 1.8fr 1fr .7fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header header header header header header"
+      "section-1 section-1 section-1 section-1 section-1 section-1"
+      "section-2 section-2 section-2 section-2 section-2 section-2"
+      "section-2 section-2 section-2 section-2 section-2 section-2"
+      "section-3 section-3 section-3 section-3 section-3 section-3"
+      "section-4 section-4 section-4 section-4 section-4 section-4"
+      "section-4 section-4 section-4 section-4 section-4 section-4"
+      "footer footer footer footer footer footer";
+      height: 100%;
+      width: 100%;
+  }
+  
+  .header { grid-area: header;
+    height: 10vh;
+ }
+  
+  .footer { grid-area: footer; 
+    height: 12vh;
+}
+  
+  .section-1 { grid-area: section-1;
+    height: 20vh;
+}
+  
+  .section-2 { grid-area: section-2;
+    height: 20vh;
+}
+  
+  .section-3 { grid-area: section-3; 
+    height: 20vh;
+}
+  
+  .section-4 { grid-area: section-4;
+    height: 20vh;
+}
+
+  body{
+    font-family: 'Poppins', sans-serif;
+    background-image: url(../Imagenes/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+ /*HEADER*/
+.logo{  
+    width: 20%;
+    height: auto;
+    margin: 0.5rem;      
+}
+/*Nav*/
+header{
+    position: relative;
+    height: 150px;
+}
+nav ul{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    margin: 0.5rem;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+nav ul li a{
+    color: #c87d5d;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    color: #a7684d;
+}
+.linkActive{
+    color: #a7684d;
+}
+/*Submenú*/
+.submenu{
+    position: relative;
+}
+ul ul{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+    
+}
+ul ul li{
+    display: block;
+}
+ul li:hover ul{
+    display: block;
+}
+.fa-sort-down{
+    margin-left: 0.5rem;
+}
+.banner{ position: relative;
+    width: 100%;
+    height: 250px;   
+    background-image: url("../Imagenes/marcas.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+h1{ position: absolute;
+    width: 100%;
+    top: 0;
+    color:rgb(3, 3, 3);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.4rem;
+}
+p{
+    text-align: justify;
+    font-size: 1rem;
+    color: #000;
+    margin: 1.5rem auto;
+    width: 80%;
+}
+/*Imágenes de autos*/
+.container{
+    text-align: center;
+}
+.container__title{
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem;
+    text-align: center;
+}
+.container__img{
+    width: 30%;
+    margin: 0.5rem;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 30%);
+}
+/*Sección 2 - Contacto*/
+.formContainer{
+    width: 50%;
+    margin: 3rem auto;
+    padding: 1.5rem 1rem;
+    background-color:  #c87d5d;
+    border-radius: 0.5rem;
+    box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 30%);
+}
+/*Formulario*/
+.formContainer__title{
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1.5rem;
+    text-align: center;
+}
+.form{
+    text-align: center;
+}
+.form__label{
+    display: inline-block;
+    width: 60%;
+    text-align: left;
+    color: #ffffff;
+    font-weight: 600;
+}
+.form__input, .form__textarea{
+    width: 60%;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color:#eee;
+
+    color: rgb(87, 82, 82);
+    border: none;
+    border-bottom: solid 1px #c87d5d;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.form__textarea{
+    height: 5rem;
+    resize: none;
+}
+.form__input:focus, .form__textarea:focus{
+    outline: none;
+}
+.form__input--submit{
+    background-color: #c87d5d;
+    margin-top: 1.5rem;
+    border-radius: 0.3rem;
+    border-bottom: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+.form__input--submit:hover{
+    background-color: #a7684d;
+}
+/*FOOTER*/
+footer{
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background-color: #121212;
+}
+footer p{
+    color: #ebdbce;
+    font-weight: 600;
+    text-align: center;
+    font-size: 0.8rem;
+}
+.fa-whatsapp{
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    color: #fff;
+    font-size: 2rem;
+    background-color: #3ec34f;
+    border-radius: 50%;
+    padding: 0.6rem;
+}
+
+
+@media (max-width:768px){   
+    nav ul li{
+        font-weight: 600; 
+        font-size: .8rem;  
+    }
+    .grilla {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: .5fr 1.5fr 1fr 1fr 1.5fr 1.5fr 1.5fr .5fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;}
+    .formContainer__title{
+            color: #fff;
+            font-size: .8rem;
+            font-weight: 600;
+            margin: .3rem;
+            text-align: center;
+        }
+        p{
+            text-align: justify;
+            font-size: .8rem;
+            color: #000;
+            margin: 2.5rem auto;
+            width: 90%;
+        }
+        .formContainer{
+            width: 80%;
+            margin: 3rem auto;
+            padding: .5rem .5rem;
+            background-color:  #c87d5d;
+            border-radius: 0.5rem;
+            box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 30%);
+        }
+        .form__textarea{
+            height: .1rem;
+            resize: none;
+        }
+        footer{
+            margin-top: 4rem;
+            padding: 1rem;
+            background-color: #121212;
+        }
+        @media (max-width:425px){
+            video{
+                display: flex;
+                flex: center;
+                margin: auto;
+                width: 400px;
+                position: center;
+                border: #000 solid 3px;
+                border-radius: 1px;
+                box-shadow: 3px 3px 5px 0px rgb(0 0 0 / 30%)
+            }           
+
+        }
+
+}
