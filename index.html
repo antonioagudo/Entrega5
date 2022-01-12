@@ -14,6 +14,7 @@
     <!--Link FontAwesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="./css/estilo.css">
     <title>AUTOS</title>
 </head>
@@ -46,7 +47,7 @@
             </footer>
         </div>
         <div class="section-1 banner">
-            <h1>AUTOS</h1>
+            <h1 class="wow animate__animated animate__rubberBand">AUTOS</h1>
         </div>
         <div class="section-2">
             <div id="nosotros">
@@ -69,10 +70,10 @@
         </div>
         <div class="section-3">
             <div class="container">
-                <h2 class="container__title">IMÁGENES</h2>
-                <img src="Imagenes/2021-Ford-Focus-Euro-spec-1.jpeg" alt="FOCUS" class="container__img">
-                <img src="Imagenes/20210122-CHEVROLET-CRUZE-2021-ARGENTINA-01.jpeg" alt="CRUZE" class="container__img">
-                <img src="Imagenes/honda-civic-2021-11-1024x669.jpeg" alt="CIVIC" class="container__img">
+                <h2 class="container__title wow animate__animated animate__bounceOut">IMÁGENES</h2>
+                <img src="Imagenes/2021-Ford-Focus-Euro-spec-1.jpeg" alt="FOCUS" class="container__img wow animate__animated animate__bounceIn">
+                <img src="Imagenes/20210122-CHEVROLET-CRUZE-2021-ARGENTINA-01.jpeg" alt="CRUZE" class="container__img wow animate__animated animate__bounceIn">
+                <img src="Imagenes/honda-civic-2021-11-1024x669.jpeg" alt="CIVIC" class="container__img wow animate__animated animate__bounceIn">
             </div>
         </div>
         <div class="section-4">
@@ -99,6 +100,10 @@
             </section>
         </div>
     </div>
+    <script src="js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 </body>
 
 </html>
